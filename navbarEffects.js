@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let height, imageUrl;
 
         switch (page) {
-            case 'home.html':
+            case 'index.html':
                 height = '100vh';
                 imageUrl = 'images/hotel-front-view.png';
                 break;
