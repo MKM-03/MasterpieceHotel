@@ -54,31 +54,31 @@ document.addEventListener("DOMContentLoaded", function () {
         switch (page) {
             case 'index':
             case 'index.html':
-                imageUrl = 'images/hotel-front-view.webp';
+                imageUrl = '/images/hotel-front-view.webp';
                 break;
 
             case 'events_news.html':
                 height = '70vh';
-                imageUrl = 'images/banner-longue.webp';
+                imageUrl = '/images/banner-longue.webp';
                 initialHeadingColor = 'rgb(255,255,255)';
                 initialLinkColor = 'rgb(255,255,255)';
                 break;
 
             case 'rooms.html':
                 height = '90vh';
-                imageUrl = 'images/sample-room.webp';
+                imageUrl = '/images/sample-room.webp';
                 break;
 
             case 'reservation.html':
                 height = '85vh';
-                imageUrl = 'images/reserve.webp';
+                imageUrl = '/images/reserve.webp';
                 initialHeadingColor = 'rgb(255,255,255)';
                 initialLinkColor = 'rgb(255,255,255)';
                 break;
 
             case 'contact.html':
                 height = '80vh';
-                imageUrl = 'images/contact-us.webp';
+                imageUrl = '/images/contact-us.webp';
                 break;
         }
 
@@ -97,3 +97,4 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', toggleNavbar);
     toggleNavbar();
 });
+
