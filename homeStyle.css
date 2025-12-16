@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(135, 100, 69);
+}
+
+body a {
+    text-decoration: none;
+}
+
+/* Style for vision and mission container */
+.vision-mission-container,
+.reservation-form {
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+/* Style for vision and mission sections */
+.vision,
+.mission,
+.res-content {
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Make vision and mission sections visible */
+.vision.visible,
+.mission.visible,
+.res-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Style for headings in vision and mission sections */
+.vision h1,
+.mission h1,
+.res-content h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 70px;
+    color: rgb(133, 89, 9);
+}
+
+/* Style for paragraph text in vision and mission sections */
+.vision p,
+.mission p,
+.res-content p {
+    color: rgb(136, 68, 4);
+    font-size: 20px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    max-width: 75%;
+}
+
+/* Style for the events and rooms sections */
+.events,
+.rooms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+}
+
+/* Style for the content container in the events and rooms sections */
+.events-content,
+.rooms-content {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Style for the headings of rooms and events sections */
+.events-content h1,
+.rooms-content h1 {
+    margin-bottom: 0;
+    font-family: 'Tangerine', cursive;
+    font-size: 70px;
+    text-align: left;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Style for the paragraph text in the rooms and events sections */
+.events-content p,
+.rooms-content p {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: left;
+    word-wrap: break-word;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Make the rooms content and events content visible when scrolled */
+.events-content.visible h1,
+.events-content.visible p,
+.rooms-content.visible h1,
+.rooms-content.visible p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Style for the buttons of both events and rooms */
+.events-content button,
+.rooms-content button,
+.res-content button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #654321;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the buttons */
+.events-content button:hover,
+.rooms-content button:hover,
+.res-content button:hover {
+    background-color: #654321;
+    color: #ffffff;
+}
+
+/* Style for the image container in the events section */
+.events-image,
+.rooms-image {
+    content: "";
+    clear: both;
+    /* display: table; */
+    flex: 1;
+    padding: 0;
+    overflow: hidden;
+    max-width: 50%;
+}
+
+/* Style for the image in the events section */
+.events-image img,
+.rooms-image img {
+    float: right;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Style for the contact us section */
+.contact-us {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    font-size: 20px;
+    color: antiquewhite;
+    margin-left: 40px;
+    padding: 0;
+}
+
+/* Style for the contact us heading */
+.contact-us h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+/* Style for the icon and paragraph containers */
+.contact-us .contact-info {
+    margin-top: 5px;
+}
+
+/* Style for the icons */
+.contact-us .contact-info img {
+    color: rgb(250, 234, 214);
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 3%;
+    height: 3%;
+}
+
+/* Style for the paragraphs */
+.contact-us .contact-info p {
+    display: inline-block; 
+    margin-top: 0;
+}
+
+footer {
+    color: antiquewhite;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(250, 235, 215);
+}

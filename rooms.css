@@ -1,0 +1,606 @@
+/*-------------------------------------- start of general preparations for entire page --------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+body h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 60px;
+    color: rgb(126, 75, 9);
+}
+
+
+.content-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.content-navbar {
+    background-color: rgb(85, 59, 10);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-navbar ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin: 10px 10px;
+}
+
+.content-navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.content-navbar ul li::after {
+    content: '';
+    width: 0;
+    height: 4px;
+    background: white;
+    position: absolute;
+    transition: width 0.5s;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+}
+
+.content-navbar ul li.active::after,
+.content-navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content-container > div {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease; 
+    animation: fadeIn 1s ease; 
+}
+
+#rooms {
+    display: block;
+    opacity: 1;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/*-------------------------------------- end of general preparations for entire page --------------------------------------*/
+
+
+
+/*-------------------------------------- Start of rooms and suites section styling --------------------------------------*/
+.rooms-suites-container,
+.dining-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    clear: both;
+}
+
+.rooms-contanier,
+.restaurants-container {
+    flex: 1;
+}
+
+.room-type1,
+.room-type2 {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.room-image {
+    position: relative;
+    display: grid;
+    object-fit: cover;
+}
+
+.room-image img {
+    width: 600px;
+    height: 600px;
+    transition: filter 0.8s ease; 
+}
+
+.room-image:hover img,
+.rest-image:hover img {
+    filter: blur(5px); 
+}
+
+.overlay-room,
+.overlay-rest {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.room-image:hover .overlay-room,
+.rest-image:hover .overlay-rest {
+    opacity: 1;
+}
+
+.room-details,
+.rest-details {
+    color: white; 
+    font-size: 24px; 
+    text-align: center;
+    z-index: 1;
+}
+
+.room-image button,
+.rest-image button {
+    height: 40px;
+    text-align: center;
+    margin-top: 3px;
+    text-transform: uppercase;
+    color: rgb(117, 77, 2);
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(117, 77, 2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.room-image button:hover,
+.rest-image button:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(117, 77, 2);
+}
+
+.room-type1 img {
+    float: right;
+}
+
+.room-type2 img {
+    float: left;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.room-type1 h2,
+.room-type2 h2,
+.restaurants-container h2 {
+    font-family: 'Tangerine', cursive;
+    font-weight: bold;
+    font-size: 60px;
+    color: rgb(126, 75, 9);
+    margin-bottom: 60px;
+}
+
+.room-type1 .type,
+.room-type2 .type,
+.rest-type1 .type,
+.rest-type2 .type {
+    font-size: 18px;
+    color: rgba(126, 75, 9, 0.74);
+    margin-top: -60px;
+    margin-bottom: 60px;
+}
+
+.room-type1 .tip,
+.room-type2 .tip,
+.rest-type1 .tip,
+.rest-type2 .tip {
+    font-size: 15px;
+    color: rgba(126, 75, 9, 0.74);
+}
+
+.room-type1 p,
+.room-type2 p {
+    font-size: 20px;
+    color: rgb(126, 75, 9);
+    max-width: 400px;
+    word-wrap: break-word;
+}
+
+/*-------------------------------------- second half: Suites styling container --------------------------------------*/
+
+.suites-container {
+    margin-top: 200px;
+    flex: 1;
+    justify-content: center;
+}
+
+.suite-type1,
+.suite-type2,
+.suite-type3 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.suite-image {
+    position: relative;
+    display: grid;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.suite-image img {
+    width: 1300px;
+    height: 650px;
+    object-fit: cover;
+}
+
+.suite-image img {
+    transition: filter 0.8s ease; 
+}
+
+.suite-image:hover img {
+    filter: blur(5px); 
+}
+
+.overlay-suite {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.suite-image:hover .overlay-suite {
+    opacity: 1;
+}
+
+.suite-details {
+    color: white; 
+    font-size: 24px; 
+    text-align: center;
+    z-index: 1;
+}
+
+.suite-image button {
+    height: 40px;
+    text-align: center;
+    margin-top: 3px;
+    text-transform: uppercase;
+    color: rgb(117, 77, 2);
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(117, 77, 2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.suite-image button:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(117, 77, 2);
+}
+
+.suites-container h2 {
+    font-family: 'Tangerine', cursive;
+    font-size: 60px;
+    color: rgb(126, 75, 9);
+    margin-bottom: 5px;
+}
+
+.suites-container .type {
+    font-size: 18px;
+    color: rgba(126, 75, 9, 0.74);
+    margin-bottom: 15px;
+}
+
+.suites-container p {
+    font-size: 20px;
+    color: rgb(126, 75, 9);
+    max-width: 1000px;
+    word-wrap: break-word;
+}
+
+.suites-container .tip {
+    margin-top: 5px;
+    font-size: 15px;
+    color: rgba(126, 75, 9, 0.74);
+}
+/*-------------------------------------- end of rooms and suites section styling --------------------------------------*/
+
+
+/*-------------------------------------- start of dining section styling --------------------------------------*/
+.rest-type1,
+.rest-type2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px; 
+}
+
+.rest-type1 {
+    margin-left: -120px;
+}
+
+.rest-type2 {
+    margin-right: -120px;
+}
+
+.rest-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.rest-type1 img {
+    width: 1000px;
+    height: 600px;
+    object-fit: cover;
+    float: left;
+}
+
+.rest-type2 img {
+    width: 1000px;
+    height: 600px;
+    object-fit: cover;
+    float: right;
+}
+
+.rest-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: 0 40px; 
+}
+
+.rest-type1 .rest-desc {
+    margin-bottom: 400px;
+    margin-left: 100px;
+}
+
+.rest-type2 .rest-desc {
+    margin-bottom: 400px;
+    margin-right: 145px;
+}
+
+.rest-type1 h2,
+.rest-type2 h2 {
+    font-family: 'Tangerine', cursive;
+    font-weight: bold;
+    font-size: 80px;
+    color: rgb(126, 75, 9);
+    margin-bottom: 60px;
+}
+
+.rest-type1 p,
+.rest-type2 p {
+    font-size: 20px;
+    color: rgb(126, 75, 9);
+    max-width: 400px;
+    word-wrap: break-word;
+}
+/*-------------------------------------- end of dining section styling --------------------------------------*/
+
+
+
+/*-------------------------------------- Start of services section styling --------------------------------------*/
+.services-container {
+    padding: 15px 9%;
+    padding-bottom: 100px;
+    background: rgb(85, 59, 10);
+}
+
+.services-container h1 {
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto auto;
+    height: auto;
+    gap: 15px;
+}
+
+.box {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.box img {
+    width: 60px;
+    height: 60px;
+}
+
+.box h3 {
+    color: rgb(117, 77, 2);
+    font-size: 22px;
+    padding: 10px 0;
+}
+
+.box p {
+    color: rgba(117, 77, 2, 0.8);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.box .btn {
+    margin-top: 10px;
+    display: inline-block;
+    background: rgb(85, 59, 10);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 25px;
+    transition: all 0.3s ease;
+}
+
+.box .btn:hover {
+    letter-spacing: 1px;
+    background: #fff;
+    color: rgb(126, 75, 9);
+}
+
+.box:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        padding: 20px;
+    }
+}
+/*-------------------------------------- end of services section styling--------------------------------------*/
+
+
+
+/*-------------------------------------- Start of activites section styling --------------------------------------*/
+.activities-container {
+    width: 800px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.activities-container h2 {
+    margin-top: 50px;
+    font-size: 50px;
+    font-family: 'Tangerine', cursive;
+    color: rgba(126, 75, 9, 0.788);
+    text-align: center;
+    border-bottom: 2px solid rgba(126, 75, 9, 0.63);
+    padding-bottom: 5px;
+}
+
+.activity {
+    box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.9);
+    display: flex;
+    border-radius: 8px;
+    margin: 32px 0;
+}
+
+.activity-left {
+    background-color: rgb(85, 59, 10);
+    width: 160px;
+    min-width: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eee;
+    padding: 8px 48px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px 0 0 8px;
+}
+
+.activity-left .date {
+    font-size: 56px;
+}
+
+.activity-left .month {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.activity-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 0 24px;
+}
+
+.activity-right h3.activity-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: rgb(126, 75, 9);
+    margin: 24px 0 10px 0;
+    text-transform: uppercase;
+}
+
+.activity-right .activity-timing {
+    background: rgb(126, 75, 9);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    padding: 8px;
+    border-radius: 16px;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.activity-right .activity-timing img {
+    width: 30px;
+    height: 30px;
+    padding-right: 8px;
+}
+
+@media (max-width: 550px) {
+    .activity {
+        flex-direction: column;
+    }
+
+    .activity-left {
+        padding: 0;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .activity-left .date, .month {
+        display: inline-block;
+        font-size: 24px;
+    }
+
+    .activity-date {
+        padding: 10px 0;
+    }
+}
+/*-------------------------------------- end of activites section --------------------------------------*/

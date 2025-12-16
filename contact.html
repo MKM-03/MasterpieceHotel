@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="sharedStyles.css">
+    <link rel="stylesheet" href="sharedFooter.css">
+
+    <script src="navbarEffects.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation bar of the website -->
+    <div class="navbar-container">
+        <div class="banner">
+            <div class="navbar">
+                <span class="logo"><img src="images/masterpiece-hotel-logo.webp" alt="Masterpiece Hotel Logo"></span>
+                <h2>Masterpiece Hotel</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events_news.html" class="active">Events & News</a></li>
+                    <li><a href="rooms.html">Rooms & Suites</a></li>
+                    <li><a href="reservation.html">Reserve</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact-container">
+        <div class="left-side-container">
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.476273437186!2d-122.4194155846002!3d37.77492997975268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e8de8f85f9d%3A0x13f1a5d95f314c07!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1615907393865!5m2!1sen!2sus"
+                    frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                </iframe>
+            </div>
+
+            <div class="fields-container">
+                <h2>Contact Us</h2>
+
+                <div class="address">
+                    <h3>Address</h3>
+                    <address>
+                        <strong>Masterpiece Hotel</strong><br>
+                        123 Main Street<br>
+                        Anytown, State 12345<br>
+                        P.O. Box 456<br>
+                        Anytown, State 12345
+                        <br>
+                        General Inquiries: <a href="tel:123-456-7890">123-456-7890</a><br>
+                        Reservations: <a href="tel:987-654-3210">987-654-3210</a><br>
+                        Email: <a href="mailto:info@example.com">info@example.com</a><br>
+                        Website: <a href="https://www.example.com">www.example.com</a>
+                    </address>
+                </div>
+
+                <form action="confirmation.html" id="messageForm" method="post"
+                    onsubmit="return confirm('Are you sure you want to submit this message?');" target="_blank">
+
+                    <div class="message-container">
+                        <label for="message">Leave a message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <input type="submit" value="Send Message">
+                </form>
+
+            </div>
+        </div>
+
+        <div class="right-side-container">
+            <div class="key-figures">
+                <h2>Key Personnel</h2>
+                <h3>John Doe - CEO</h3>
+                <p>Email: john.doe@example.com</p>
+
+                <h3>Jane Smith - Sales</h3>
+                <p>Email: jane.smith@example.com</p>
+
+                <h3>Mike Johnson - Customer Support Manager</h3>
+                <p>Email: mike.johnson@example.com</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>2024 All Rights Reserved | Masterpiece Hotel &copy;</p>
+    </footer>
+
+</body>
+
+</html>

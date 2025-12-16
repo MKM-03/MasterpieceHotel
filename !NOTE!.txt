@@ -1,0 +1,3 @@
+- to test the backend work, xampp will be required
+- i will be leaving a screenshot of the data being inserted into the db
+- the site is not adjusted to work on small screens

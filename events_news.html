@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masterpiece Hotel</title>
+
+    <!-- CSS related links -->
+    <link rel="stylesheet" type="text/css" href="sharedStyles.css">
+    <link rel="stylesheet" href="sharedFooter.css">
+    <link rel="stylesheet" type="text/css" href="events_news.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Scripts links -->
+    <script src="navbarEffects.js"></script>
+    <script src="eventsVisibility.js"></script>
+    <script src="slider.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation bar of the website -->
+    <div class="navbar-container">
+        <div class="banner">
+            <div class="navbar">
+                <span class="logo"><img src="images/masterpiece-hotel-logo.webp" alt="Masterpiece Hotel Logo"></span>
+                <h2>Masterpiece Hotel</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events_news.html" class="active">Events & News</a></li>
+                    <li><a href="rooms.html">Rooms & Suites</a></li>
+                    <li><a href="reservation.html">Reserve</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container of all content in the webpage -->
+    <div class="content">
+
+        <!-- Announcements section with several announcement samples -->
+        <div class="timeline">
+            <span class="anounHeading">
+                <h1>Announcements</h1>
+            </span>
+            <div class="announcements">
+
+                <!-- Adds a logo for the announcements, this could be a different icon depending on where the announcement came from -->
+                <img src="images/masterpiece-hotel-logo.webp" alt="Icon of the Announcement">
+                <div class="scrolling-content">
+                    <span class="arrow"></span>
+                    <h2>Announcement 1</h2>
+                    <small>date 1</small>
+                    <p>some paragraph related to announcement 1
+                        looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong paragraph</p>
+                </div>
+            </div>
+
+            <!-- Announcement 2 section -->
+            <div class="announcements">
+                <!-- Add a logo for the announcements, this could be a different icon depending on where the announcement came from -->
+                <img src="images/masterpiece-hotel-logo.webp" alt="Icon of the Announcement">
+                <div class="scrolling-content">
+                    <span class="arrow"></span>
+                    <h2>Announcement 2</h2>
+                    <small>date 2</small>
+                    <p>some paragraph related to announcement 2</p>
+                </div>
+            </div>
+
+            <!-- Announcement 3 section -->
+            <div class="announcements">
+                <!-- Add a logo for the announcements, this could be a different icon depending on where the announcement came from -->
+                <img src="images/masterpiece-hotel-logo.webp" alt="Icon of the Announcement">
+                <div class="scrolling-content">
+                    <span class="arrow"></span>
+                    <h2>Announcement 3</h2>
+                    <small>date 3</small>
+                    <p>some paragraph related to announcement 3</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Events and news section -->
+        <div class="events-news">
+            <span class="enHeading">
+                <h1>Events & News</h1>
+            </span>
+            <div class="img-slider">
+                <button class="prev-btn"></button>
+                <button class="next-btn"></button>
+                <div class="slide active">
+                    <img src="images/events-&-news.webp" alt="">
+                    <div class="info">
+                        <h2>Slide01 title</h2>
+                        <p>Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test
+                            Test Test Test </p>
+                    </div>
+                </div>
+
+                <!-- 1st slide -->
+                <div class="slide">
+                    <img src="images/events-&-news.webp" alt="">
+                    <div class="info">
+                        <h2>Slide02 title</h2>
+                        <p>Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test
+                            Test Test Test </p>
+                    </div>
+                </div>
+
+                <!-- 2nd slide -->
+                <div class="slide">
+                    <img src="images/events-&-news.webp" alt="">
+                    <div class="info">
+                        <h2>Slide03 title</h2>
+                        <p>Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test
+                            Test Test Test </p>
+                    </div>
+                </div>
+
+                <!-- 3rd slide -->
+                <div class="nav">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Offers section -->
+    <div class="offers">
+        <span class="ofHeading">
+            <h1>Special Offers</h1>
+        </span>
+
+
+        <div class="offers-container">
+
+            <!-- 1st offer -->
+            <input type="radio" name="offer" id="off1" checked>
+            <label for="off1" class="card">
+                <div class="row">
+                    <div class="icon">1</div>
+                    <div class="description">
+                        <h4>Offer-1</h4>
+                        <p>Offer-1 details</p>
+                    </div>
+                </div>
+            </label>
+
+            <!-- 2nd offer -->
+            <input type="radio" name="offer" id="off2">
+            <label for="off2" class="card">
+                <div class="row">
+                    <div class="icon">2</div>
+                    <div class="description">
+                        <h4>Offer-2</h4>
+                        <p>Offer-2 details</p>
+                    </div>
+                </div>
+            </label>
+
+            <!-- 3rd offer -->
+            <input type="radio" name="offer" id="off3">
+            <label for="off3" class="card">
+                <div class="row">
+                    <div class="icon">3</div>
+                    <div class="description">
+                        <h4>Offer-3</h4>
+                        <p>Offer-3 details</p>
+                    </div>
+                </div>
+            </label>
+
+            <!-- 4th offer -->
+            <input type="radio" name="offer" id="off4">
+            <label for="off4" class="card">
+                <div class="row">
+                    <div class="icon">4</div>
+                    <div class="description">
+                        <h4>Offer-4</h4>
+                        <p>Offer-4 details</p>
+                    </div>
+                </div>
+            </label>
+
+            <!-- 5th offer -->
+            <input type="radio" name="offer" id="off5">
+            <label for="off5" class="card">
+                <div class="row">
+                    <div class="icon">5</div>
+                    <div class="description">
+                        <h4>Offer-5</h4>
+                        <p>Offer-5 details</p>
+                    </div>
+                </div>
+            </label>
+
+            <!-- 6th offer -->
+            <input type="radio" name="offer" id="off6">
+            <label for="off6" class="card">
+                <div class="row">
+                    <div class="icon">6</div>
+                    <div class="description">
+                        <h4>Offer-6</h4>
+                        <p>Offer-6 details</p>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </div>
+
+
+    <!-- FAQs section -->
+    <section class="faqs-container">
+        <h1>FAQs</h1>
+
+        <div class="faqs">
+            <div class="question">
+                <h2>Question-1</h2>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21M21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="answer">
+                <p>Answer for question 1Answer for question 1Answer for question 1Answer for question 1Answer for
+                    question 1Answer for question 1Answer for question 1</p>
+            </div>
+        </div>
+
+
+        <div class="faqs">
+            <div class="question">
+                <h2>Question-2</h2>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21M21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="answer">
+                <p>Answer for question 2</p>
+            </div>
+        </div>
+
+
+        <div class="faqs">
+            <div class="question">
+                <h2>Question-3</h2>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21M21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="answer">
+                <p>Answer for question 3</p>
+            </div>
+        </div>
+
+
+        <div class="faqs">
+            <div class="question">
+                <h2>Question-4</h2>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21M21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="answer">
+                <p>Answer for question 4</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>2024 All Rights Reserved | Masterpiece Hotel &copy;</p>
+    </footer>
+</body>
+
+</html>

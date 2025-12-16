@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" type="text/css" href="sharedStyles.css">
+    <link rel="stylesheet" href="sharedFooter.css">
+
+    <script src="navbarEffects.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation bar of the website -->
+    <div class="navbar-container">
+        <div class="banner">
+            <div class="navbar">
+                <span class="logo"><img src="images/masterpiece-hotel-logo.webp" alt="Masterpiece Hotel Logo"></span>
+                <h2>Masterpiece Hotel</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events_news.html" class="active">Events & News</a></li>
+                    <li><a href="rooms.html">Rooms & Suites</a></li>
+                    <li><a href="reservation.html">Reserve</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reservation form -->
+    <div class="form-container" id="reservationForm">
+        <h2>Reservation Form</h2>
+        <form id="reservationForm" action="form_handling.php" method="post" 
+            onsubmit="return confirm('Are you sure you want to submit this form?');" target="_blank">
+            <label for="customer_name">Customer Name:</label>
+            <input type="text" id="customer_name" name="customer_name" required>
+    
+            <label for="check_in_date">Check-in Date:</label>
+            <input type="date" id="check_in_date" name="check_in_date" required>
+    
+            <label for="check_out_date">Check-out Date:</label>
+            <input type="date" id="check_out_date" name="check_out_date" required>
+    
+            <label for="number_of_people">Number of People:</label>
+            <input type="number" id="number_of_people" name="number_of_people" min="1" required>
+    
+            <label for="contact_number">Contact Number:</label>
+            <input type="tel" id="contact_number" name="contact_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="Format: 123-456-7890" required>
+    
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+    
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" rows="4"></textarea>
+    
+            <input type="submit" name="submit" value="Reserve">
+        </form>
+    </div>
+    
+
+    <footer>
+        <p>2024 All Rights Reserved | Masterpiece Hotel &copy;</p>
+    </footer>
+</body>
+
+</html>
